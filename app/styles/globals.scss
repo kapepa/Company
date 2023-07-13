@@ -1,0 +1,60 @@
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
+@import "./mixing";
+@import "./variables";
+@import "./fonts";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: $root-font-size + px;
+  min-width: 320px;
+}
+
+body {
+  background-color: var(--background-base-white);
+  font-family: var(--font-montserrat-Regular);
+  font-size: var(--font-size-m);
+}
+
+.container{
+  padding: 0 toRem(20);
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+.flex{ display: flex }
+
+.direction-row{ flex-direction: row }
+
+.direction-column{ flex-direction: column }
+
+.content-center{ justify-content: center }
+
+.content-between{ justify-content: space-between }
+
+.content-around{ justify-content: space-around }
+
+.items-center{ align-items: center }
+
+.items-flex-start{ align-items: flex-start }
+
+.items-flex-end{ align-items: flex-end }
+
+
+@media screen and (max-width: 1024px) {
+  html{font-size: 20px;}
+}
+
+@media screen and (max-width: 768px) {
+  html {font-size: 18px;}
+}
+
+@media screen and (max-width: 425px) {
+  html{font-size: 16px;}
+}

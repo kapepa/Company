@@ -5,6 +5,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let requestRouter = require('./modules/request/request.controller');
+let homeRouter = require('./modules/home/home.controller');
 
 let app = express();
 
@@ -18,9 +19,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/request', requestRouter);
-// app.use('/users', usersRouter);
+app.use('/api/home', homeRouter);
 
-// catch 404 and forward to error handler
+// catch not-found and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });

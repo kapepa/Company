@@ -1,0 +1,9 @@
+@import "./styles/mixing";
+
+.logo{
+  text-decoration: none;
+  color: var(--color-gray);
+  font-size: toRem(36);
+  line-height: toRem(28);
+  font-family: var(--font-montserrat-alternates-bold);
+}

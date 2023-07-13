@@ -1,0 +1,29 @@
+@import "styles/mixing";
+
+.panel{
+  border-bottom: 1px solid var(--color-base);
+  position: sticky;
+  top: 0;
+  background-color: var(--background-base-white);
+  &__area{
+    padding: toRem(32) 0;
+    gap: toRem(30);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .panel{
+    &__area{
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .panel{
+    &__area{
+      padding: toRem(16) 0;
+      gap: toRem(25);
+    }
+  }
+}

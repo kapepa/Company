@@ -1,0 +1,17 @@
+@import "styles/mixing";
+
+.call-link{
+  column-gap: toRem(8);
+  text-decoration: none;
+  color: var(--color-gray);
+  &__ico{
+    width: toRem(18);
+    height: toRem(18);
+  }
+  &__span{
+    font-family: var(--font-montserrat-Bold);
+    color: var(--color-gray);
+    font-size: toRem(18);
+    line-height: toRem(19);
+  }
+}
