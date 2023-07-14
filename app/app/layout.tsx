@@ -1,6 +1,7 @@
 import '../styles/globals.scss'
 import type { Metadata } from 'next'
 import Panel from "../widgets/Panel/ui/Panel";
+import {ReactNode} from "react";
 
 export const metadata: Metadata = {
   title: 'Company',
@@ -10,13 +11,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html lang="en">
       <body>
         <Panel/>
         {children}
+        <div id="modal-portal"/>
       </body>
     </html>
   )

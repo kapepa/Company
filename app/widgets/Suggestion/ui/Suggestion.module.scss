@@ -1,0 +1,32 @@
+@import "styles/mixing";
+
+.suggestion{
+  background-color: var(--background-secondary-white);
+  padding: toRem(99) 0;
+  color: var(--color-gray);
+  &__h{
+    font-family: var(--font-montserrat-alternates-medium);
+    font-size: toRem(43);
+    line-height: toRem(43);
+    padding-bottom: toRem(15);
+  }
+  &__article{
+    font-family: var(--font-montserrat-Regular);
+    font-size: toRem(22);
+    line-height: toRem(38);
+    padding-bottom: toRem(41);
+  }
+  &__btn{
+    padding: toRem(38) toRem(207);
+    font-size: toRem(24);
+    line-height: toRem(24);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .suggestion{
+    &__btn{
+      padding: toRem(30) toRem(100);
+    }
+  }
+}

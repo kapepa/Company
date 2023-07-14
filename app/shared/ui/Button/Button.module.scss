@@ -1,0 +1,26 @@
+@import "styles/mixing";
+
+.btn{
+  cursor: pointer;
+  font-family: var(--font-montserrat-alternates-bold);
+  box-shadow: 0 toRem(4) toRem(4) 0 rgba(0,0,0, 0.75);
+  border: none;
+  border-radius: toRem(10);
+  padding: toRem(10) toRem(20);
+  transition: opacity .25s linear, box-shadow .25s linear;
+  opacity: 1;
+  &:hover{
+    opacity: .8;
+  }
+  &:active{
+    box-shadow: inset 0 toRem(-4) toRem(4) 0 rgba(0,0,0, 0.4);
+  }
+  &--blueviolet{
+    background-color: var(--color-base);
+    color: var(--color-white);
+  }
+  &--white{
+    background-color: var(--background-base-white);
+    color: var(--color-gray);
+  }
+}

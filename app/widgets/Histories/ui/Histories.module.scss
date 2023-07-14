@@ -3,9 +3,59 @@
 .histories{
   padding: toRem(54) 0 toRem(106);
   &__area{
-
+    row-gap: toRem(115);
   }
-  &__template{
+  &__h{
+    font-family: var(--font-montserrat-alternates-bold);
+    font-size: toRem(46);
+    line-height: toRem(46);
+    padding-bottom: toRem(50);
+  }
+  &__story{
+    gap: toRem(24);
+  }
+  &__article{
+    max-width: toRem(690);
+    flex: 1 1 auto;
+  }
+  &__slice{
+    row-gap: toRem(10);
+    flex-grow: 1;
+  }
+  &__text{
+    font-size: toRem(22);
+    line-height: toRem(38);
+    font-family: var(--font-montserrat-Regular);
+    color: var(--color-gray);
+  }
+  &__substrate{
+    flex: 1 1 toRem(486);
+  }
+  &__image{
+    width: 100%;
+    max-height: 100%;
+    border-radius: toRem(10);
+    max-width: toRem(486);
+    min-width: toRem(300);
+  }
+}
 
+@media screen and (max-width: 768px){
+  .histories{
+    &__story{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__image{
+      min-width: toRem(260);
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .histories{
+    &__area{
+      row-gap: toRem(60);
+    }
   }
 }

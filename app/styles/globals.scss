@@ -13,7 +13,7 @@
 
 html{
   font-size: $root-font-size + px;
-  min-width: 320px;
+  min-width: 310px;
 }
 
 body {
@@ -33,6 +33,8 @@ body {
 .direction-row{ flex-direction: row }
 
 .direction-column{ flex-direction: column }
+
+.direction-row-reverse{ flex-direction: row-reverse }
 
 .content-center{ justify-content: center }
 

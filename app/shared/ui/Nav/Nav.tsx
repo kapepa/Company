@@ -20,16 +20,16 @@ const Nav: FC = () => {
 
   return (
     <nav className={`flex content-between ${styles.nav}`}>
-      <AnchorLink className={`${styles.nav__link} ${classNames({[styles["nav__link--active"]]: activeLink(NavPath.HOME)})}`} href={NavPath.HOME}>
+      <AnchorLink className={classNames(styles.nav__link, {[styles["nav__link--active"]]: activeLink(NavPath.HOME)})} href={NavPath.HOME}>
         Home
       </AnchorLink>
-      <AnchorLink className={`${styles.nav__link} ${classNames({[styles["nav__link--active"]]: activeLink(NavPath.BLOG)})}`} href={NavPath.BLOG}>
+      <AnchorLink className={classNames(styles.nav__link, {[styles["nav__link--active"]]: activeLink(NavPath.BLOG)})} href={NavPath.BLOG}>
         Blog
       </AnchorLink>
-      <AnchorLink className={`${styles.nav__link} ${classNames({[styles["nav__link--active"]]: activeLink(NavPath.NEWS)})}`} href={NavPath.NEWS}>
+      <AnchorLink className={classNames(styles.nav__link, {[styles["nav__link--active"]]: activeLink(NavPath.NEWS)})} href={NavPath.NEWS}>
         News
       </AnchorLink>
-      <AnchorLink className={`${styles.nav__link} ${classNames({[styles["nav__link--active"]]: activeLink(NavPath.ABOUT)})}`} href={NavPath.ABOUT}>
+      <AnchorLink className={classNames(styles.nav__link, {[styles["nav__link--active"]]: activeLink(NavPath.ABOUT)})} href={NavPath.ABOUT}>
         About
       </AnchorLink>
     </nav>

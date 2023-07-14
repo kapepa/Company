@@ -3,9 +3,11 @@
 :root {
   --background-base-white: #FFFFFF;
   --background-secondary-white: #F9F8F8;
+  --background-secondary-black: #000000;
 
   --color-gray: #2E2E2E;
   --color-base: #A200B0;
+  --color-white: #FFFFFF;
 
   --font-montserrat-alternates-bold: "MontserratAlternatesSemiBold", sans-serif ;
   --font-montserrat-alternates-medium: "MontserratAlternatesMedium", sans-serif ;
@@ -24,4 +26,6 @@
   --font-height-s: toRem(30);
   --font-height-m: toRem(34);
   --font-height-l: toRem(42);
+
+  --z-index-popup: 10;
 }
