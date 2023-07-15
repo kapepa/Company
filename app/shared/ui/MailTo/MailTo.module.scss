@@ -1,0 +1,12 @@
+@import "styles/mixing";
+
+.mail{
+  text-decoration: none;
+  column-gap: toRem(10);
+  &__span{
+    font-size: toRem(26);
+    line-height: toRem(41);
+    font-family: var(--font-montserrat-Regular);
+    color: var(--color-gray);
+  }
+}

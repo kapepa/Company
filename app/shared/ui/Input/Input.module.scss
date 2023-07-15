@@ -1,0 +1,33 @@
+@import "./styles/mixing";
+
+.input{
+  border: none;
+  outline: none;
+  padding: toRem(10) toRem(25);
+  font-size: toRem(18);
+  font-family: var(--font-montserrat-Medium);
+  border-radius: toRem(10);
+  &::placeholder {
+    color: var(--color-gray-pretty);
+  }
+  &--blueviolet{
+    color: var(--background-base-white);
+    background-color: var(--color-base);
+  }
+  &--white{
+    color: var(--color-base);
+    background-color: var(--background-base-white);
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__warning{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translate(2%, 15%);
+    font-size: toRem(16);
+    color: var(--color-white);
+  }
+}

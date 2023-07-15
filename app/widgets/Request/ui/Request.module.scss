@@ -1,0 +1,33 @@
+@import "styles/mixing";
+
+.request {
+  padding: toRem(73) 0 toRem(184);
+  &__h{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-montserrat-Extra-Bold);
+    font-size: toRem(32);
+    line-height: toRem(50);
+    padding-bottom: toRem(14);
+    color: var(--color-gray);
+  }
+  &__subtitle{
+    text-align: center;
+    font-family: var(--font-montserrat-Medium);
+    color: var(--color-gray);
+    font-size: toRem(32);
+    line-height: toRem(50);
+    padding-bottom: toRem(31);
+  }
+  &__form{
+    padding: toRem(113) toRem(50) toRem(97);
+  }
+}
+
+@media screen and (max-width: 425px){
+  .request {
+    &__form{
+      padding: toRem(70) toRem(25) toRem(50);
+    }
+  }
+}

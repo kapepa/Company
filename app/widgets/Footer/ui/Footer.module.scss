@@ -1,0 +1,27 @@
+@import "styles/mixing";
+
+.footer{
+  padding: toRem(65) 0 toRem(80);
+  border-top: 1px solid var(--color-base);
+  color: var(--color-gray);
+  &__logo{
+    font-size: toRem(46);
+    padding-bottom: toRem(20);
+  }
+  &__span{
+    font-family: var(--font-montserrat-Semi-Bold);
+    font-size: toRem(28);
+    line-height: toRem(44);
+  }
+  &__basement{
+    column-gap: toRem(35);
+    row-gap: toRem(15);
+    flex-wrap: wrap;
+    padding: 0 toRem(15);
+  }
+  &__phone{
+    font-family: var(--font-montserrat-Regular);
+    font-size: toRem(26);
+    line-height: toRem(28);
+  }
+}

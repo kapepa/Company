@@ -1,7 +1,7 @@
 export default function Blog() {
   return (
     <main>
-      Blog
+      <div className="container">Blog</div>
     </main>
   )
 }

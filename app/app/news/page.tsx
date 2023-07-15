@@ -1,7 +1,7 @@
 export default function News() {
   return (
     <main>
-      News
+      <div className="container">News</div>
     </main>
   )
 }

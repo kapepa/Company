@@ -1,0 +1,41 @@
+@import "styles/mixing";
+
+.form{
+  border-radius: toRem(10);
+  padding: toRem(30);
+  &--blueviolet{
+    background-color: var(--color-base);
+  }
+  &--white{
+    background-color: var(--background-base-white);
+  }
+  &__basement{
+    align-self: normal;
+    padding-top: toRem(71);
+  }
+  &__interaction{
+    max-width: toRem(710);
+    width: 100%;
+    row-gap: toRem(31);
+  }
+  &__input{
+    width: 100%;
+    padding: toRem(17) toRem(54);
+    font-size: toRem(26);
+  }
+  &__btn{
+    padding: toRem(25);
+    font-size: toRem(26);
+    line-height: toRem(41);
+    width: 100%;
+    max-width: toRem(373);
+  }
+}
+
+@media screen and (max-width: 425px){
+  .form{
+    &__btn{
+      padding: toRem(15);
+    }
+  }
+}

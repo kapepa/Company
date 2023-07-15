@@ -13,11 +13,11 @@ interface CallLinkProps {
 const CallLink: FC<CallLinkProps> = ({children, className, phoneNumber}) => {
   return (
     <a
-      className={classNames("flex content-between items-center", styles["call-link"], {[className]: !!className})}
+      className={classNames("flex content-between items-center", styles["call-link"], {[className]: !!className} )}
       href={`tel:${phoneNumber}`}
     >
       <Image className={styles["call-link__ico"]} src={CallIco} alt="phone" />
-      <span className={styles["call-link__span"]}>{children}</span>
+      <span className={classNames(styles["call-link__span"], {[className]: !!className})}>{children}</span>
     </a>
   );
 }

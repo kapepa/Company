@@ -27,6 +27,13 @@
 }
 
 @font-face {
+  font-family: "MontserratSemiBold";
+  src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot');
+  src: url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf") format("truetype"),
+  url("../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff") format('woff');
+}
+
+@font-face {
   font-family: "MontserratMedium";
   src: url('../fonts/Montserrat-Medium/Montserrat-Medium.eot');
   src: url("../fonts/Montserrat-Medium/Montserrat-Medium.ttf") format("truetype"),

@@ -12,7 +12,7 @@ enum ViewBtn {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   className?: string,
   children: ReactNode,
-  callback: (e: MouseEvent<HTMLButtonElement>) => void,
+  callback?: (e: MouseEvent<HTMLButtonElement>) => void,
   view: typeof ViewBtn,
   disabled?: boolean
 }

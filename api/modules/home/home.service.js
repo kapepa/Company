@@ -1,4 +1,7 @@
-let { GetSuggestion } = require("../suggestion/suggestion.service")
+let { GetSuggestion } = require("../suggestion/suggestion.service");
+let { GetEducation } = require("../education/education.service");
+let { GetProblems } = require("../problems/problems.service");
+let { GetHeaderText } = require("../request/request.service");
 
 function GetHeader () {
   return {
@@ -24,7 +27,14 @@ function GetStory () {
 }
 
 function ReceiveHome () {
-  return Object.assign({header: GetHeader()}, {stories:GetStory()},  {suggestion: GetSuggestion()} );
+  return Object.assign(
+    {header: GetHeader()},
+    {stories:GetStory()},
+    {suggestion: GetSuggestion()},
+    {education: GetEducation()},
+    {problems: GetProblems()},
+    {request: GetHeaderText()},
+  );
 };
 
 module.exports = { ReceiveHome, GetHeader };
