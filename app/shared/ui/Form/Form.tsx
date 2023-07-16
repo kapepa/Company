@@ -5,6 +5,7 @@ import {Button, ViewBtn} from "@/shared/ui/Button/Button";
 import classNames from "classnames";
 import {Input, InputView} from "@/shared/ui/Input/Input";
 import {useForm} from "react-hook-form";
+import {ContactInfo} from "@/widgets/Request/ui/Request";
 
 
 enum ViewForm {
@@ -15,15 +16,14 @@ enum ViewForm {
 interface FormProps{
   className?: string,
   view: typeof ViewForm,
-  callback: (data: T) => T;
+  callback(data: ContactInfo): Promise<any>;
 }
 
 const Form: FC<FormProps> = ({className, view, callback}) => {
   const { register, reset, formState: { errors }, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    callback(data)
-    reset();
+  const onSubmit = (data: ContactInfo) => {
+    callback(data).then(() => reset());
   }
 
   return (

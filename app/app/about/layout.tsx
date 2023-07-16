@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import {Suspense} from "react";
+import Loading from "@/app/about/loading";
 
 export const metadata: Metadata = {
   title: 'About | Company',
@@ -8,5 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <Suspense fallback={<Loading />}>
+      {children}
+    </Suspense>
+  )
 }

@@ -16,6 +16,7 @@ const MailTo: FC<MailToProps> = ({className, email, children}) => {
     <a
       className={classNames("flex content-between items-center", styles.mail, {[className]: !!className} )}
       href={`mailto:${email}`}
+      target="_top"
     >
       <Image src={Envelope} alt="phone" />
       <span className={classNames(styles.mail__span, {[className]: !!className})}>{children}</span>

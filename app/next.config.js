@@ -21,7 +21,7 @@ const nextConfig = {
     ]
   },
   env: {
-    API: "http://localhost:5000/"
+    API: "http://localhost:5000"
   }
 }
 
