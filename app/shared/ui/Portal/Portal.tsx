@@ -19,7 +19,7 @@ const Portal: FC<PortalProps> = ({children}) => {
     return () => setPortal(prev => !prev);
   }, [])
 
-  return portal && createPortal(children, document.getElementById("modal-portal"))
+  return portal && createPortal(children, ref.current)
 }
 
 export {Portal}

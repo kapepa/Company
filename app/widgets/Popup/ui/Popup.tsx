@@ -31,7 +31,7 @@ const Popup: FC<PopupProps> = memo(({children, className, isOpen, onClose,  type
   return (
     <Portal>
       <div
-        className={classNames("flex content-center items-center", styles.popup, { [styles["popup--open"]]: isOpen, [className]: !!className })}
+        className={classNames("flex content-center items-center", styles.popup, { [styles["popup--open"]]: isOpen, [!!className ? className : ""]: !!className })}
         onClick={closePopup}
       >
         <div className={classNames(styles.popup__frame)}>
@@ -49,4 +49,4 @@ const Popup: FC<PopupProps> = memo(({children, className, isOpen, onClose,  type
 
 
 
-export { Popup, PopupType };
+export {Popup, PopupType};

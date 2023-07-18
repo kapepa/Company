@@ -8,6 +8,6 @@ export default async function Blog() {
   )
 }
 
-const GetBlog = () => new Promise(resolve => {
+const GetBlog = () => new Promise<void>((resolve) => {
   setTimeout(() => resolve(), 1000)
 })

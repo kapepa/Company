@@ -9,7 +9,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({className}) => {
-  return  <Link className={classNames(styles.logo, {[className]: !!className})} href={NavPath.HOME}>Company</Link>
+  return  <Link className={classNames(styles.logo, {[!!className ? className : ""]: !!className})} href={NavPath.HOME}>Company</Link>
 }
 
 export {Logo};

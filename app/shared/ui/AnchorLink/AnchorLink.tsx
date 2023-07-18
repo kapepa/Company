@@ -3,16 +3,18 @@ import styles from "./AnchorLink.module.scss";
 import Link from "next/link";
 import classNames from "classnames";
 
-interface AnchorLink extends HTMLAnchorElement{
+interface AnchorLink{
   href: string,
   className?: string,
   children: ReactNode,
 }
 
-const AnchorLink: FC = memo(({href, children, className, ...other}) => {
+const AnchorLink: FC<AnchorLink> = memo(({href, children, className, ...other}) => {
   return (
-    <Link className={classNames(styles.link, {[className]: !!className} )} href={href} {...other}>{children}</Link>
+    <Link className={classNames(styles.link, {[!!className ? className : ""]: !!className} )} href={href} {...other}>{children}</Link>
   )
 })
+
+AnchorLink.displayName = "AnchorLink";
 
 export {AnchorLink};

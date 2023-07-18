@@ -34,4 +34,5 @@ const Problems: FC<ProblemsProps> = ({title, subtitle, list}) => {
   )
 }
 
-export {Problems, ProblemsProps};
+export {Problems};
+export type {ProblemsProps};

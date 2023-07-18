@@ -30,8 +30,8 @@ const Request: FC<RequestProps> = ({title, subtitle}) => {
       },
     )
       .then(res => res.json())
-      .then((text: string) => isOpened<OpenCallbackProps>({notification: text, type: PopupType.NOTIFICATION}))
-      .catch((err: Error) => isOpened<OpenCallbackProps>({notification: err.message, type: PopupType.WARNING}))
+      .then((text: string) => isOpened({notification: text, type: PopupType.NOTIFICATION}))
+      .catch((err: Error) => isOpened({notification: err.message, type: PopupType.WARNING}))
   },[open])
 
   return (
@@ -47,5 +47,6 @@ const Request: FC<RequestProps> = ({title, subtitle}) => {
   )
 }
 
-export {Request, RequestProps, ContactInfo};
+export {Request};
+export type {RequestProps, ContactInfo}
 

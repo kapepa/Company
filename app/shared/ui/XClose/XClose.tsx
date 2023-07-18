@@ -11,7 +11,7 @@ const XClose: FC<XCloseProps> = ({className, callback}) => {
   return (
     <button
       onClick={callback}
-      className={classNames(styles.x_close, {[className]: !!className})}
+      className={classNames(styles.x_close, {[!!className ? className : ""]: !!className})}
     />
   )
 }

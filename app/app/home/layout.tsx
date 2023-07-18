@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {FC, Suspense, ReactNode} from "react";
+import {Suspense, ReactNode} from "react";
 import Loading from "@/app/home/loading";
 
 export const metadata: Metadata = {

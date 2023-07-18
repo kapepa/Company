@@ -23,8 +23,8 @@ const Suggestion: FC<SuggestionProps> = ({title, desc}) => {
       method: "GET", cache: 'no-store',
     })
       .then((res) => res.json())
-      .then((data: RequestProps) => isOpened<OpenCallbackProps>({notification: data.answer, type: PopupType.NOTIFICATION}))
-      .catch((err: Error) => isOpened<OpenCallbackProps>({notification: err.message, type: PopupType.WARNING}));
+      .then((data: RequestProps) => isOpened({notification: data.answer, type: PopupType.NOTIFICATION}))
+      .catch((err: Error) => isOpened({notification: err.message, type: PopupType.WARNING}));
   }, [open])
 
   return (
@@ -40,4 +40,5 @@ const Suggestion: FC<SuggestionProps> = ({title, desc}) => {
   )
 }
 
-export {Suggestion, SuggestionProps}
+export {Suggestion};
+export type {SuggestionProps};

@@ -32,7 +32,7 @@ export default async function Home() {
 }
 
 async function GetHome (): Promise<GetHomeProps> {
-  return await fetch<GetHomeProps>(`${process.env.API}/api/home/receive`, {
+  return await fetch(`${process.env.API}/api/home/receive`, {
     method: 'GET',
     cache: 'no-store',
   })

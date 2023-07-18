@@ -14,7 +14,7 @@ enum NavPath {
 const Nav: FC = () => {
   const currentRoute = usePathname();
 
-  const activeLink = (path: typeof NavPath) : boolean => {
+  const activeLink = (path: NavPath) : boolean => {
     return path === currentRoute;
   }
 

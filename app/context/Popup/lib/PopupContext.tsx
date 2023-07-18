@@ -14,4 +14,5 @@ interface PopupContextProps {
 
 const PopupContext = createContext<PopupContextProps>({ open: false, isOpened: () => {} } );
 
-export {PopupContext, PopupContextProps, OpenCallbackProps}
+export {PopupContext};
+export type {PopupContextProps, OpenCallbackProps};

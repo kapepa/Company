@@ -44,4 +44,5 @@ const Header: FC<HomeProps> = ({title, info, img}) => {
   )
 };
 
-export {Header, HomeProps};
+export {Header};
+export type {HomeProps};

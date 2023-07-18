@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 import {Button, ViewBtn} from "@/shared/ui/Button/Button";
 import classNames from "classnames";
 import {Input, InputView} from "@/shared/ui/Input/Input";
-import {useForm} from "react-hook-form";
+import {useForm, UseFormProps} from "react-hook-form";
 import {ContactInfo} from "@/widgets/Request/ui/Request";
 
 
@@ -15,21 +15,21 @@ enum ViewForm {
 
 interface FormProps{
   className?: string,
-  view: typeof ViewForm,
-  callback(data: ContactInfo): Promise<any>;
+  view: ViewForm,
+  callback(data:  UseFormProps<ContactInfo>): Promise<any>;
 }
 
 const Form: FC<FormProps> = ({className, view, callback}) => {
   const { register, reset, formState: { errors }, handleSubmit } = useForm();
 
-  const onSubmit = (data: ContactInfo) => {
+  const onSubmit = (data: UseFormProps<ContactInfo>) => {
     callback(data).then(() => reset());
   }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={classNames("flex direction-column items-center", styles.form, styles[`form--${view}`], {[className]: !!className})}
+      className={classNames("flex direction-column items-center", styles.form, styles[`form--${view}`], {[!!className ? className : ""]: !!className})}
     >
       <div className={classNames("flex direction-column", styles.form__interaction)}>
         <Input
@@ -42,7 +42,7 @@ const Form: FC<FormProps> = ({className, view, callback}) => {
             required: { value: true, message: "Name is required" },
             minLength: { value: 3, message: "Min length is 3"}
           })}
-          errors={errors.name && errors.name?.message}
+          errors={errors.name?.message}
         />
 
         <Input
@@ -55,7 +55,7 @@ const Form: FC<FormProps> = ({className, view, callback}) => {
             required: { value: true, message: "Email Address is required" },
             pattern: { value: /\S+@\S+\.\S+/, message: "Entered value does not match email format"},
           })}
-          errors={errors.mail && errors.mail?.message}
+          errors={errors.mail?.message}
         />
 
       </div>

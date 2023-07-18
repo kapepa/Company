@@ -39,4 +39,5 @@ const Education: FC<EducationProps> = ({title, educations}) => {
   )
 }
 
-export {Education, EducationProps};
+export {Education};
+export type {EducationProps}
