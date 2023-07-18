@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "api:install": "npm --prefix ../api install",
-    "api:node": "npm --prefix ../api run node",
+    "api:node": "npm --prefix ../api run start",
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
     "concurrently": "concurrently \"npm run api:start\" \"next build\"",
