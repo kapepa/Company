@@ -8,10 +8,9 @@
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
     "concurrently": "concurrently \"npm run api:start\" \"next build\"",
-    "build": "next build",
-    "start": "concurrently \"npm run api:start\" \"next build\"",
-    "lint": "next lint",
-    "start:prod": "concurrently \"npm run api:start\" \"npm run dev\" "
+    "build": "concurrently --kill-others \"npm run api:start\" \"next build\"",
+    "start": "concurrently \"api:node\"  \"next start\" ",
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "20.4.1",
