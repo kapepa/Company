@@ -9,7 +9,7 @@
     "dev": "next dev",
     "concurrently": "concurrently \"npm run api:start\" \"next build\"",
     "build": "concurrently --kill-others \"npm run api:start\" \"next build\"",
-    "start": "concurrently \"npm run api:start\" \"next start\"",
+    "start": "concurrently  \"next start\"",
     "lint": "next lint",
     "start:prod": "concurrently \"npm run api:start\" \"npm run dev\" "
   },
