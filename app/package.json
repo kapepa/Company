@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "api:install": "npm --prefix ../api install && npm install",
+    "api:install": "npm --prefix ../api install",
     "api:node": "npm --prefix ../api run node",
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
+    "concurrently": "concurrently \"npm run api:start\" \"next build\"",
     "build": "next build",
-    "build:prod": "npm run api:install",
-    "prod": "concurrently \"npm run api:node\" \"next dev\"",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:prod": "concurrently \"npm run api:start\" \"npm run dev\" "
   },
   "dependencies": {
     "@types/node": "20.4.1",
