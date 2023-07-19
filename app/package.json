@@ -9,8 +9,9 @@
     "dev": "next dev",
     "concurrently": "concurrently \"npm run api:start\" \"next build\"",
     "build": "next build",
-    "build:prod": "concurrently \"npm run api:start\" \"npm run dev\"",
-    "start": "concurrently \"npm run api:node\" \"next start\"",
+    "build:prod": "concurrently --kill-others \"npm run api:install\"",
+    "prod": "concurrently \"npm run api:node\" \"next dev\"",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
