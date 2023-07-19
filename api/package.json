@@ -5,10 +5,10 @@
   "scripts": {
     "node": "node ./bin/www",
     "start": "nodemon ./bin/www",
-    "build": "npm i",
+    "build": "npm install",
     "app": "npm  --prefix ../app run dev",
     "dev": "concurrently \"npm run start\" \"npm run app\"",
-    "app:start": "npm --prefix ../app run start",
+    "app:start": "npm --prefix ../app run start"
   },
   "dependencies": {
     "app": "file:../app",
