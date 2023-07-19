@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "api:install": "npm --prefix ../api install",
-    "api:node": "npm --prefix ../api run start",
+    "api:node": "npm --prefix ../api run node",
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
+    "concurrently": "concurrently \"npm run api:start\" \"next build\"",
     "build": "concurrently \"npm run api:start\" \"next build\"",
-    "build:prod": "concurrently \"npm run api:start\" \"npm run build\"",
     "start": "next start",
     "lint": "next lint"
   },
