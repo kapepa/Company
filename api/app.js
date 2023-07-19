@@ -4,6 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let cors = require('cors');
+let serverless = require('serverless-http');
 
 let requestRouter = require('./modules/request/request.controller');
 let homeRouter = require('./modules/home/home.controller');
