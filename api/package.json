@@ -5,7 +5,7 @@
   "scripts": {
     "node": "node ./bin/www",
     "start": "nodemon ./bin/www",
-    "build": "npm install",
+    "build": "npm i",
     "app": "npm  --prefix ../app run dev",
     "dev": "concurrently \"npm run start\" \"npm run app\"",
     "app:start": "npm --prefix ../app run start",
