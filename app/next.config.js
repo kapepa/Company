@@ -21,7 +21,7 @@ const nextConfig = {
     ]
   },
   env: {
-    API: "http://localhost:5000"
+    API: process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://company-961r.onrender.com",
   }
 }
 
