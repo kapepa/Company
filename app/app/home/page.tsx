@@ -22,17 +22,17 @@ export default async function Home() {
     <main>
       <Header title={header.title} info={header.info} img={header.img}/>
       <Histories title={stories.title} histories={stories.histories} />
-      {/*<Suggestion title={suggestion.title} desc={suggestion.desc}/>*/}
+      <Suggestion title={suggestion.title} desc={suggestion.desc}/>
       <Education title={education.title} educations={education.educations}/>
       <Problems title={problems.title} subtitle={problems.subtitle} list={problems.list}/>
-      {/*<Request title={request.title} subtitle={request.subtitle}/>*/}
+      <Request title={request.title} subtitle={request.subtitle}/>
       <Footer/>
     </main>
   )
 }
 
 async function GetHome (): Promise<GetHomeProps> {
-  return await fetch(`http://localhost:5000/api/home/receive`, {
+  return await fetch(`${process.env.API}/api/home/receive`, {
     method: 'GET',
     cache: 'no-store',
   })
