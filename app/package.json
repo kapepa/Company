@@ -7,7 +7,6 @@
     "api:node": "npm --prefix ../api run node",
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
-    "concurrently": "concurrently \"npm run api:start\" \"next build\"",
     "build": "next build",
     "build:prod": "npm run api:install",
     "prod": "concurrently \"npm run api:node\" \"next dev\"",
