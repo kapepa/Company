@@ -9,12 +9,7 @@
     "app": "npm  --prefix ../app run dev",
     "dev": "concurrently \"npm run start\" \"npm run app\"",
     "app:start": "npm --prefix ../app run start",
-    "dev:prod": "concurrently \"npm run start\" \"npm run node\"",
-    "install:app": "npm  --prefix ../app install",
-    "install:api": "npm install",
-    "install:all": "npm run app:start && npm run install:api",
-    "app:build": "npm --prefix ../app run build",
-    "start:prod": "npm run install:all && npm run node && npm run app"
+    "dev:prod": "concurrently \"npm run start\" \"npm run node\""
   },
   "dependencies": {
     "app": "file:../app",
