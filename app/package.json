@@ -8,7 +8,7 @@
     "api:start": "npm run api:install && npm run api:node",
     "dev": "next dev",
     "concurrently": "concurrently \"npm run api:start\" \"next build\"",
-    "build": "npm run api:start",
+    "build": "next build",
     "start": "concurrently \"npm run api:start\" \"next start\"",
     "lint": "next lint",
     "start:prod": "concurrently \"npm run api:start\" \"npm run dev\" "
