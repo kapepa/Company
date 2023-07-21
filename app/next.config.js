@@ -23,7 +23,7 @@ const nextConfig = {
   env: {
     // API: process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://company-961r.onrender.com",
     API: process.env.NODE_ENV === "development" ? "http://localhost:5000" : "https://famous-rose-sundress.cyclic.app/api/home/receive",
-  }
+  },
 }
 
 module.exports = nextConfig
