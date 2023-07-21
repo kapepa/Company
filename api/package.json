@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "node": "node ./bin/www",
+    "start": "node index.js",
     "nodemon": "nodemon ./bin/www",
     "build": "npm install",
     "app": "npm  --prefix ../app run dev",
